@@ -7,7 +7,16 @@ namespace CarsAndLetter
 {
     public interface IСarpoolService
     {
+        // 3 approaches
         
+        // 1 - Recursive
+        public double GetMaxDistance(double countOfCars, double flueCapacity);
+
+        // 2 - Foreach with Car objects
+        public double GetMaxDistance(IEnumerable<Car> cars);
+        
+        // 3 - Just for
+        public double GetMaxDistance(double flueCapacity);
     }
 
     public class Carpool : IСarpoolService
